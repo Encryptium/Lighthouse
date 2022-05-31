@@ -1,0 +1,10 @@
+{% extends 'article.html' %}
+
+{% block content %}
+    <img src="/{{ object.image }}">
+    <h1>{{ object.title }}</h1>
+    <p id="article-metadata">{{ object.date }}</p>
+    <div id="article-content">
+        <pre>{{ object.content }}</pre>
+    </div>
+{% endblock %}

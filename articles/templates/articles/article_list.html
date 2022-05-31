@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="articles">
+        {% for instance in object_list %}
+            <a class="article" href="/articles/{{ instance.id }}">
+                <img src="/{{ instance.image }}" alt="{{ instance.title }}">
+                <h1>{{ instance.title }}</h1>
+
+                <p class="article-card-metadata">{{ instance.date }}</p>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

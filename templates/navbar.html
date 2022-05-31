@@ -1,0 +1,9 @@
+{% load static %}
+<div id="navbar">
+	<img src="{% static 'img/lighthouse.svg' %}" width="50" height="50" alt="lighthouse">
+	
+	<ul>
+		<li><a href="{% url 'about' %}">About</a></li>
+		<li><a href="{% url 'articles' %}">Articles</a></li>
+	</ul>
+</div>

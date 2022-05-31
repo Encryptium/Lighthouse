@@ -1,0 +1,271 @@
+/* Styles */
+@import url('navbar.css');
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.clear-float {
+    clear: both;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg, tomato, #ffc107);
+}
+
+header img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header #spinning-logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: linear-gradient(45deg, gainsboro, grey);
+    opacity: 0.45;
+    animation: spinning-logo 1.5s linear infinite;
+    display: none;
+}
+
+@keyframes spinning-logo {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header a {
+    /* text-decoration: none; */
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+a.floating-side-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.animated-floating {
+    animation: floating 1.5s linear infinite alternate;
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+
+#scroll-down {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: black;
+    transition: color 0.5s;
+}
+
+#scroll-down:hover {
+    color: white;
+    transition: color 0.3s;
+}
+
+#content {
+    position: absolute;
+    top: 100vh;
+}
+
+#articles {
+    display: grid;
+    /* make a grid with 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* place #articles below header */
+    grid-gap: 50px;
+    width: 75vw;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.article {
+    height: 370px;
+    box-shadow:   rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 350px;
+    color: inherit;
+    position: relative;
+    border-radius: 9px;
+    margin: 100px auto;
+}
+
+.article img {
+    width: 100%;
+    height: 55%;
+    margin: auto;
+    object-fit: cover;
+    background-color: whitesmoke;
+    border-radius: 9px 9px 0px 0px;
+}
+
+.article h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 15px 15px 15px;
+}
+
+.article .article-card-metadata {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #373737;
+}
+
+/* Create article page */
+#save-button {
+    background: linear-gradient(45deg, tomato, #ffc107);
+    color: whitesmoke;
+    float: right;
+}
+
+textarea#id_content {
+    border: none;
+    box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    resize: none;
+    width: 90%;
+    margin: auto;
+    border-radius: 0px 0px 9px 9px;
+    display: block;
+    padding: 15px;
+    outline: none;
+    height:50vh;
+}
+
+input#id_title {
+    border: none;
+    box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    resize: none;
+    width: 90%;
+    height: 35px;
+    font-size: 20px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 9px 9px 0px 0px;
+    display: block;
+    outline: none;
+    font-weight: bold;
+    color: #373737;
+}
+
+input#id_image {
+    width: 90%;
+    height: 30vh;
+    margin: auto;
+    margin-bottom: 25px;
+    display: block;
+    /* background-color: whitesmoke; */
+    opacity: 0;
+}
+
+#upload-area {
+    width: 58vw;
+    height: 30vh;
+    margin: auto;
+    margin-bottom: 25px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    background-color: white;
+    border-radius: 9px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-align: center;
+}
+
+#upload-area i {
+    font-size: 50px;
+    color: grey;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#upload-area p {
+    width: 100%;
+    font-size: 20px;
+    color: grey;
+    font-weight: 500;
+
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

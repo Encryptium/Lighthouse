@@ -1,0 +1,23 @@
+{% extends 'article.html' %}
+
+    
+{% block content %}
+    <img src="/static/img/lighthouse.svg">
+    <h1>Lighthouse</h1>
+    <p id="article-metadata"><span style="color: grey">Last Updated</span> May 30, 2022</p>
+    <div id="article-content">
+        <pre>
+    Lighthouse is an open source project committed to providing an great platform for creators to reach out to their audience and update them on progress. To start, go to <a href="//github.com/JonathanW2018/Lighthouse/">Lighthouse's Github Page</a>. Fork the repository, and you can start putting together your personal Lighthouse website locally.
+        </pre>
+            
+            <h2>A Little About Lighthouse</h2>
+            <pre>Lighthouse uses the Django web framework, easily making it capable of much more than a blog platform. For example, it can be extended to include an online store, forum, or newsletter.</pre>
+
+            <h2>Getting Started</h2>
+            <pre>To get started after forking the Github repository, make sure you set a secret key in the lighthouse/settings.py file. It can be anything, but make sure that secret key remains secret. Change any of the presets or CSS styles as you wish. The Lighthouse templates doesn't come with much, but what it has will get you up and running very quickly. There is an Articles page like the one you see above in the navbar. There is also an about page, which you are reading right now. All of these are customizable. If you want to publish articles in the Articles tab, you should create a user in the Django administration and give them access to publishing articles.</pre>
+
+            <h2>More to Come in the Future</h2>
+            <pre>Currently, Lighthouse is still under the developmental stages. There are few features with limited capabilities. Therefore, some of the features that you want may not be available. It's highly likely these features will come in future updates, but currently, you will have to implement a custom solution before those are available.</pre>
+            <a class="floating-side-button animated-floating" href="https://github.com/JonathanW2018/Lighthouse"><i class="fa-brands fa-github"></i> Get Started</a>
+    </div>
+{% endblock %}
