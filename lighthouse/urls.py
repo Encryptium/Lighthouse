@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import include, path
 
 # views
+from django.views.generic import TemplateView
 from pages.views import AboutView
 from articles.views import ArticleListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("accounts/", include("django.contrib.auth.urls")),
+    path('sw.js', (TemplateView.as_view(template_name="app/sw.js", content_type='application/javascript', )), name='sw.js'),
+    path('', include("django.contrib.auth.urls")),
     path('', ArticleListView.as_view(), name='home'),
     path('about/', AboutView.as_view(), name='about'),
     path('articles/', include('articles.urls'), name='articles'),

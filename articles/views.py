@@ -9,6 +9,8 @@ from .forms import ArticleModelForm
 class ArticleListView(ListView):
     model = Article
     template_name = 'articles/article_list.html'
+    # display list from newest to oldest
+    queryset = Article.objects.all().order_by('-id')
 
 class ArticleDetailView(DetailView):
     model = Article
@@ -19,3 +21,4 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
     template_name = 'articles/article_create.html'
     form_class = ArticleModelForm
     queryset = Article.objects.all()
+    login_url = '/login/'

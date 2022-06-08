@@ -34,15 +34,55 @@ article #article-metadata {
 
 article #article-content pre {
     white-space: pre-wrap;
+    line-height: 1.5;
 }
 
-article #article-content h2, h3 {
+/* Markdown stylings */
+article #article-content pre h1 {
+    font-size: 30px;
+    /* margin-bottom: 15px; */
+    text-align: left;
+}
+
+article #article-content pre a {
+    background: linear-gradient(45deg, tomato, #ffc107);
+    /* clip bg */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    font-weight: bold;
+    color: transparent;
+}
+
+article #article-content pre img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 20px auto;
+    border-radius: 0;
+}
+
+article #article-content pre blockquote {
+    background-color: whitesmoke;
+    border-radius: 0;
+    padding: 5px;
+    border-left:rgba(149, 157, 165, 0.2) 5px solid;
+    padding: 5px 10px 5px 10px;
+}
+
+article #article-content pre code {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
+
+article #article-content h1, h2, h3 {
     color: #373737;
     margin-top: 35px;
     /* transform: translateY(15px); */
 }
 
-article #article-content h2::after, h3::after {
+article #article-content h1::after, h2::after, h3::after {
     content: '';
     width: 90%;
     height: 2px;
@@ -61,7 +101,7 @@ article #article-content a {
 #article-progress {
     width: 100vw;
     border-radius: 0px;
-    color: tomato;
+    /* color: tomato; */
     background: transparent;
     border: none;
     height: 5px;
@@ -70,14 +110,15 @@ article #article-content a {
 }
 
 
-progress::-moz-progress-bar {
+#article-progress::-moz-progress-bar {
+    background: linear-gradient(45deg, tomato, #ffc107);
+}
+
+#article-progress::-webkit-progress-value {
+    -webkit-appearance: none;
     background: tomato;
 }
 
-progress::-webkit-progress-value {
-background: tomato;
-}
-
-progress::-webkit-progress-bar {
-background: tomato;
+#article-progress::-webkit-progress-bar {
+    background: transparent;
 }

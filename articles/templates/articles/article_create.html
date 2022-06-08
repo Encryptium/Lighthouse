@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-    <form method="POST">
+    <form enctype="multipart/form-data" method="POST">
         {% csrf_token %}
         <div id="upload-area">
             <i class="fa-solid fa-image"></i>
@@ -15,4 +15,5 @@
         <div class="clear-float"></div>
     </form>
     <script src="{% static 'js/file-upload.js' %}"></script>
+    <script src="{% static 'js/markdown-editor.js' %}"></script>
 {% endblock %}

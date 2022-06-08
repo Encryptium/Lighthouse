@@ -5,6 +5,14 @@
     <h1>{{ object.title }}</h1>
     <p id="article-metadata">{{ object.date }}</p>
     <div id="article-content">
-        <pre>{{ object.content }}</pre>
+        <pre>{{ object.content|safe }}</pre>
     </div>
+
+    <script>
+        var reader = new commonmark.Parser();
+        var writer = new commonmark.HtmlRenderer();
+        var parsed = reader.parse(document.querySelector("article pre").innerText);
+
+        document.querySelector("article pre").innerHTML = writer.render(parsed);
+    </script>
 {% endblock %}

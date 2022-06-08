@@ -21,8 +21,20 @@
 <body>
 	{% include 'navbar.html' %}
 	{% include 'header.html' %}
-	
+
 	<span id="content"></span>
+	<!-- check if user is logged in -->
+	{% if user.is_authenticated %}
+		<div id="login-options">
+			<a class="button" href="/articles/create/">Create Article</a>
+			<a class="button attention" href="/logout/">Logout</a>
+		</div>
+	{% else %}
+		<div id="login-options">
+			<a class="button encouraged" href="/login/">Login</a>
+			<!-- <a class="button" href="/register/">Register</a> -->
+		</div>
+	{% endif %}
 	{% block content %}{% endblock %}
 </body>
 </html>
