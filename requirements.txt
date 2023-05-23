@@ -12,7 +12,7 @@ django-six==1.0.4
 dnspython==1.16.0
 eventlet==0.31.1
 filelock==3.6.0
-Flask==2.0.2
+Flask==2.2.5
 greenlet==1.1.1
 idna==3.2
 itsdangerous==2.0.1
