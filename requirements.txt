@@ -4,7 +4,7 @@ charset-normalizer==2.0.4
 click==8.0.3
 colorama==0.4.4
 distlib==0.3.4
-Django==4.0.3
+Django==4.1.9
 django-admin==2.0.1
 django-excel-base==1.0.4
 django-excel-response2==3.0.2
